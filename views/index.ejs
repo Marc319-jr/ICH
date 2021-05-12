@@ -1,58 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href ="/css/styles.css"  rel = "stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css ">
+    <%- include('partials/head') %>
     <title>ICH</title>
 </head>
 <body>
-        <header>
-            <div class = "left">
-                <a href ="/"><img src = "/images/logo/logo.png"></a>
-                <ul type ="none">
-                    <li><a href="#">Dispatch</a></li>
-                    <li><a href="#">Tech</a></li>
-                    <li><a href="#">Stock</a></li>
-                    <li><a href="#">Reports</a></li>
-                    <li><a href="#">Vans</a></li>
-                    <li><a href="#">Helpfull websites</a></li>          
-                </ul>
-             
-            </div>
-            <div class = "right">
-                <i class="fas fa-user"></i>
-                <ul type="none">
-                    <li><a href="#">Login</a></li>          
-                    <li><a href="#">Register</a></li>          
-                </ul>
-            </div>
-        </header>
-
+        <%- include('partials/header') %>
         <main>
-            <h1>Who can do what?</h1>
+            <h1 id = "main">Who can do what?</h1>
             <section class = "cards">
-                <div class = "card">
+            <a href = "#"><div class = "card">
                     <i class="fas fa-car"></i>
                     <h1>Search by car type</h1>
                 </div>
+            </a>
 
-                <div class = "card">
+            <a href = "#"><div class = "card">
                     <i class="fas fa-lock"></i>
                     <h1>Search by tech</h1>
                 </div>
+            </a>    
             </section>
         </main>
 
 
-        <footer>
-           <span>Copyrighyt Ich inc 2021</span> 
-        </footer>
-
+      <%- include('partials/footer') %>
     
 </body>
 </html>

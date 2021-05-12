@@ -1,0 +1,21 @@
+<head>
+    <%- include('../partials/head') %>
+
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <form action = "/user/login" method="POST" class = "login">
+            <h1>Log In</h1>
+            <input type = "email" name = "email" placeholder="Ingrese email">
+            <input type="password" name="password" placeholder="Ingrese contraseña">
+            <a href = "#">Olvide mi contraseña</a>
+            <button type="submit">Ingresar</button>
+        </form>
+
+    </main>
+
+
+    <%- include('../partials/footer') %>
+</body>
