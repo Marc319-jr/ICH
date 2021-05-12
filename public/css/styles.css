@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+}
+
+
+body  header{
+    background-color:#323233;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+    body  header .left{
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    body  header .left a img{
+        width: 160px;
+        padding: 10px;
+    }
+
+    body  header .left ul{
+        display: inline-flex;
+        align-items: center;
+    }
+
+    body  header .left ul li{
+        margin: 10px;
+    }
+
+    body  header .left ul li a{
+        color: rgb(184, 184, 184);
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    body  header .right{
+        margin: 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    body  header .right i{
+        align-self: center;
+        font-size: 36px;
+        background-color: teal;
+        padding: 20px;
+        color: rgb(184, 184, 184);
+        border-radius:50% ;
+        margin-right: -30px;
+    }
+
+
+    body  header .right ul{
+        display: inline-flex;
+        align-items: center;
+    }
+
+    body  header .right ul li{
+        margin: 10px;
+    }
+
+    body  header .right ul li a{
+        color: rgb(184, 184, 184);
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    body main {
+        background-color: #1E1E1E;
+        padding: 40px;
+    }
+
+
+    body main h1{
+        padding-top:40px ;
+        margin: 0;
+        text-align: center;
+        color: rgb(184, 184, 184);
+    }
+
+    body main .cards{
+        display: flex;
+        justify-content: center;
+    }
+
+    body main .cards .card{
+        background-color: rgb(230,230,230);
+        width: 400px;
+        padding: 60px;
+        margin: 60px;
+        text-align: center;
+        border-radius: 30px;
+    }
+    body main .cards .card i{
+        font-size: 178px;
+        margin: 20px;
+        padding: 20px;
+        color: #1E1E1E;    
+    }
+    body main .cards .card h1{
+        color: #1E1E1E; 
+        font-size: 48px;   
+    }
+
+    body footer{
+    background-color:#323233;
+    height: 100px;
+    text-align: center;
+    color: white;
+    align-content: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    }
+    body footer span{
+        position: relative;
+        padding: 5px;
+    }
