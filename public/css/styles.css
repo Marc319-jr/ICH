@@ -16,11 +16,14 @@ body  header{
         margin: 0;
         display: flex;
         justify-content: flex-start;
+        align-items: center;
     }
 
     body  header .left a img{
         width: 160px;
-        padding: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+    
     }
 
     body  header .left ul{
@@ -72,7 +75,7 @@ body  header{
 
     body main {
         background-color: #1E1E1E;
-        padding: 40px;
+        padding: 60px;
     }
 
 
