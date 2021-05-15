@@ -4,8 +4,8 @@ const app = express();
 app.use(express.static('public'));
 
 //Declaraciones necesarias para poder utilziar POST
-app.use(express.urlencoded ({extended:false}));
 app.use(express.json());
+app.use(express.urlencoded ({extended:false}));
 
 
 //Declaraciones necesarias para PUT Y DELETE
@@ -14,6 +14,7 @@ app.use(methodOverrider("_method"));
 
 //Config de engine y sistema de ruteo
 app.set('view engine', 'ejs');
+
 
 //declaracion de rutas
 const indexRouter = require('./routes/indexRouter');

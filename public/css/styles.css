@@ -75,7 +75,7 @@ body  header{
 
     body main {
         background-color: #1E1E1E;
-        padding: 60px;
+        padding: 80px;
     }
 
 
@@ -186,6 +186,14 @@ body  header{
         background-color: white;
         color:black;
         font-weight: 700;        
+    }
+
+    body main .login .error{
+        margin: 0 10px;
+        padding: 0;
+        color: rgb(117, 48, 48);
+        font-size: 20px;
+        font-weight: bold;
     }
 
     body main .login label{

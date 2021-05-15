@@ -1,0 +1,24 @@
+Asi logramos mostrar todos los mensajes de validacions en 1 sola instante
+
+
+ <div class = "container my-5">
+                <% if (locals.errors) { %>      
+                   <% for(let oneError in errors) { %>
+                    <p><%= errors[oneError].msg %></p>
+
+                  <% } %>
+                <% } %>
+                </div>
+
+
+
+
+Y asi las logramos en cada campo por particular
+
+       <% if (locals.errors && errors.email) { %>
+             <p> <%= errors.email.msg  %> </p>
+            <% } %>
+
+
+
+
