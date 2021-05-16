@@ -237,16 +237,16 @@ body  header{
     }
    
 
-    body main .blocks{
+    body main .blocks {
         display: flex;
         flex-wrap: wrap;
         background-color: teal;
         padding: 30px;
-        margin: 10px;
-        border: 1px solid black;
+        margin: auto;
+        border: 2px solid black;
         border-radius: 10px;
-        justify-content: flex-start;
     }
+    
     body main .blocks .block{
         padding: 20px;
         margin: 10px;
@@ -262,6 +262,7 @@ body  header{
 
     body main .blocks .block img{
         margin-top: 10px;
+        max-height: 100px;
         justify-self: center;
         text-align: center;
 
