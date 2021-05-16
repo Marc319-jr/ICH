@@ -2,11 +2,11 @@ let fs = require('fs');
 const { validationResult } = require('express-validator');
 let controller = {
     register: (req,res) => {
-        console.log("Renderizando al login");
+        console.log("Renderizando al register");
         res.render("./user/register")
     },
     login: (req,res) => {
-        console.log("Renderizando al register");
+        console.log("Renderizando al login");
         res.render("./user/login")
     },
     create: (req,res) => {
@@ -18,8 +18,7 @@ let controller = {
         {
             return res.render("./user/register" , {errors: resultValidation.mapped(), oldData: req.body}) //Redirigo a mi usario a la pagina de creacio de usuario para corregir los errores cometidos
         }
-        return res.send("Las validaciones han pasao correctamente");
-        /*
+        
         //res.send(resultValidation) // => Pasa todo el body.req hacia la ruta dodne recibiran sus reglas de validacion
         let users;
         let archivoUsuario = fs.readFileSync('usuarios.JSON' , {encoding: 'utf-8'});
@@ -43,7 +42,7 @@ let controller = {
         let archivoJSON = JSON.stringify(users)
         fs.writeFileSync('usuarios.JSON' , archivoJSON);
         res.redirect("/")
-    */
+    
     
     
     

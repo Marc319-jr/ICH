@@ -1,0 +1,20 @@
+<head>
+<%- include('../partials/head') %>
+<title>Add Car</title>
+</head>
+
+<body>
+    <%-include('../partials/header') %>
+    <main>
+        <form action = "/search/createCar" class = "login" method="POST" enctype="multipart/form-data">
+            <h1>Add Car</h1>
+            <label for ="nombre">Nombre:</label>
+            <input type = "text" name = "nombre">
+            <label for ="imagen">Seleccione imagen de la Marca:</label>
+            <input type = "file" name = "logo">
+            <button type = "submit" >Crear</button>
+        </form>   
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+

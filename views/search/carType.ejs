@@ -1,0 +1,34 @@
+<head>
+    <%- include('../partials/head/') %>
+    <title>Car search</title>
+</head>
+
+
+<body>
+    <%- include('../partials/header') %> 
+    <main>
+        <div id = "byCar">
+        <p>Select car make</p>
+        <a href ="/search/addCar"><i class="fas fa-plus"></i></a>
+        </div>
+        <section class = "blocks">
+            <% if (autos.length ==0) { %>
+             <h1>Autos aun esta vacio</h1>
+            <% } 
+            else { %>
+            <% for( let i = 0; i < autos.length; i++ ) { %>
+            <article class = "block">
+                <img src = "/images/cars/logos/<%= autos[i].imagen %>" alt = "logo marca" width="160px">
+                <h1><%= autos[i].nombre %></h1>
+            </article>
+            <% } %>
+            <% } %>
+
+
+        </section>
+
+
+        
+    </main>
+    <%- include('../partials/footer') %> 
+</body>

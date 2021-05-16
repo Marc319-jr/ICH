@@ -19,9 +19,11 @@ app.set('view engine', 'ejs');
 //declaracion de rutas
 const indexRouter = require('./routes/indexRouter');
 const userRouter = require('./routes/userRouter');
+const searchRouter = require('./routes/searchRouter')
 //uso de rutas
 app.use('/' , indexRouter);
 app.use('/user', userRouter);
+app.use('/search' , searchRouter);
 
 
 app.listen(3000 , () => {
