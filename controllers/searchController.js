@@ -1,18 +1,10 @@
 let fs = require('fs');
+const Search = require('../models/Search');
+
 const controller = {
     byCar: (req,res) => {
         console.log("Vista de todos los autos");
-        let archivoAutos = fs.readFileSync('autos.JSON' , {encoding: 'utf-8'});
-        let autos;
-        if(archivoAutos == "")
-        {
-            console.log("El archivo autos esta vacio");
-            autos = [];
-        }
-        else
-        {
-            autos = JSON.parse(archivoAutos);
-        }
+        let autos = Search.findAll();
         res.render('./search/carType' , {'autos': autos}); 
     },
 
