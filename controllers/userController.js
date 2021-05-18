@@ -1,5 +1,9 @@
 let fs = require('fs');
+let bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
+
+const User = require('../models/User')
+
 let controller = {
     register: (req,res) => {
         console.log("Renderizando al register");
@@ -11,38 +15,32 @@ let controller = {
     },
     create: (req,res) => {
         console.log("creando al ususario");
-        console.log(req.body);
+        //validaciones
         const resultValidation = validationResult(req);
         //return res.send(resultValidation.mapped()) convierto al array de errores a un objeto literal
         if(resultValidation.errors.length > 0) //Si es que hay errores es poeque resultsValidation no esta vacio
         {
+            console.log("estoy requriendo de algunas validaciones");
             return res.render("./user/register" , {errors: resultValidation.mapped(), oldData: req.body}) //Redirigo a mi usario a la pagina de creacio de usuario para corregir los errores cometidos
         }
+        //mas validaciones
+        let userInDB = User.findByField('email' , req.body.email)
+        if(userInDB) {
+            console.log("estoy requriendo la validacion de un usuario que ya existe");
+            return res.render("./user/register" ,{ errors: { email: {msg: "este usuario ya existe"} } , oldData: req.body}) 
+        }
         
-        //res.send(resultValidation) // => Pasa todo el body.req hacia la ruta dodne recibiran sus reglas de validacion
-        let users;
-        let archivoUsuario = fs.readFileSync('usuarios.JSON' , {encoding: 'utf-8'});
-        if(archivoUsuario == "")
-        {
-            users = [];
+        //creacion del usuarion
+        let userTocreate = {
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password , 10),
+            avatar: req.file ? req.file.filename : 'default',
         }
-        else
-        {
-            users = JSON.parse(archivoUsuario);
-        }
-        let user = {
-            id: users.length,
-            email : req.body.email,
-            password : req.body.password,
-            usertyper : req.body.usertype,
-            image: req.file ? req.file.filename : '',                 
-        }
-        console.log(user);
-        users.push(user);
-        let archivoJSON = JSON.stringify(users)
-        fs.writeFileSync('usuarios.JSON' , archivoJSON);
-        res.redirect("/")
-    
+        console.log("Ya esta todo validado y voy a crear el usuario antes de guardarlo");
+        console.log(userTocreate);
+        
+        User.create(userTocreate);
+        res.redirect('/user/login')
     
     
     

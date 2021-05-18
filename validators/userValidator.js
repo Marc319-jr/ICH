@@ -8,15 +8,17 @@ const validations = [
     body('usertype').notEmpty().withMessage("Tiennes que seleccionar un tipo de ususario"),
     body('imagen').custom((value, {req}) => {
         let file = req.file;
-        let fileExt = path.extname(file.originalname)
-        let acceptedExtensions = ['.jpg' , '.png' , '.gif' , '.jpeg'];
-        if(!file) {
+        if(file == undefined)
+        {
             throw new Error('Tienes que subir una imagen')
         }
+        else{
+        let fileExt = path.extname(file.originalname)
+        let acceptedExtensions = ['.jpg' , '.png' , '.gif' , '.jpeg'];
         if(!acceptedExtensions.includes(fileExt))
         {
             throw new Error('la extension validas son: ' + acceptedExtensions.join(', '))
-        }
+        }}
         return true;
     }),
     body('passcheck').custom((value , {req}) => {
