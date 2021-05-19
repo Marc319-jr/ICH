@@ -265,7 +265,49 @@ body  header{
         max-height: 100px;
         justify-self: center;
         text-align: center;
-
     }
+
+
+
+    /*Profile*/
+    body main .center{
+        text-align: center;
+    }
+
+    body main .center i{
+        font-size: 72px;
+        background-color:#323233;
+        padding: 20px;
+        color: rgb(184, 184, 184);
+        border-radius:50%;
+        position: relative;
+        bottom: -45px;
+    }
+
+    body main .profile{
+        background-color: teal;
+        margin: auto;
+        margin-bottom: 129px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 700px;        
+        border-radius: 30px;
+        text-align:center;
+    }
+
+
+    body main .profile h1{
+        margin-top: 40px;
+    }
+
+    body main .profile .userinfo{
+        text-align: start;   
+     }
+
+
+
+
+
 
   

@@ -9,6 +9,7 @@
     <main>
         <form action = "/user/create" class = "login" enctype="multipart/form-data"  method="POST">
             <h1>Register</h1>
+            <input name="username" type = "text" placeholder="Nombre y Apellido">
             <% if (locals.errors && errors.email) { %>
                 <p class="error">! <%= errors.email.msg  %> </p>
                <% } %>

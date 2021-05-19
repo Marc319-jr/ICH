@@ -1,5 +1,6 @@
 let fs = require('fs');
 const Search = require('../models/Search');
+const { search } = require('../routes/indexRouter');
 
 const controller = {
     byCar: (req,res) => {
@@ -14,29 +15,15 @@ const controller = {
     },
     createCar: (req,res) =>{
         console.log("Creando un auto!");
-        let archivoAutos = fs.readFileSync('autos.JSON' , {encoding: 'utf-8'});
-        let autos;
-        let idauto
-        if(archivoAutos == "")
-        {
-            console.log("El archivo autos esta vacio");
-            autos = [];
-            idauto = 0;
-        }
-        else
-        {
-            autos = JSON.parse(archivoAutos);
-        }
+        let autos = Search.findAll();
+
         let auto = {
-            id: idauto,
+            id: autos.pop().id +1,
             nombre : req.body.nombre,
             imagen : req.file.filename,
             modelos : []
         }
-        autos.push(auto);
-        console.log("Agregue el nuevo auto a la base de datos");
-        let autosJSON = JSON.stringify(autos);
-        fs.writeFileSync('autos.JSON' , autosJSON);
+        Search.create(auto);
         res.redirect('./byCar');
  
     }

@@ -1,10 +1,11 @@
 [
  {
   "id": 1,
+  "username": "Marcelo Sznek",
   "email": "marcelo.sznek@gmail.com",
-  "password": "$2a$10$pw6hkLVMAp1eLTFbfGYapu6PsmCaZTtWld57MyykuonAu0aCcRX/S",
+  "password": "$2a$10$MzlVtFu1r9z60049h5uoPelZHt2iLneUpz6aD/pLS5OAlvpAmZdY2",
   "passcheck": "Ailin1997",
   "usertype": "Admin",
-  "avatar": "user-1621352235390.jpeg"
+  "avatar": "user-1621466050839.jpeg"
  }
 ]

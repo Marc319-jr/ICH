@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const session = require('express-session');
 app.use(express.static('public'));
 
 //Declaraciones necesarias para poder utilziar POST
@@ -15,6 +16,10 @@ app.use(methodOverrider("_method"));
 //Config de engine y sistema de ruteo
 app.set('view engine', 'ejs');
 
+//uso de session
+app.use(session({secret: 'Shh, Its a secret',
+                 resave: false,
+                 saveUninitialized: false}));
 
 //declaracion de rutas
 const indexRouter = require('./routes/indexRouter');
@@ -26,6 +31,6 @@ app.use('/user', userRouter);
 app.use('/search' , searchRouter);
 
 
-app.listen(3000 , () => {
+app.listen(4000 , () => {
     console.log("Corriendo al servidor 3000")
 })

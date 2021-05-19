@@ -23,9 +23,11 @@ const validation = require('../validators/userValidator')
 //GETS
 router.get('/register',  userController.register);
 router.get('/login' , userController.login);
+router.get('/profile', userController.profile);
 
 //POST
 router.post('/create' , fileUpload.single('imagen'), validation , userController.create);
+router.post('/login' , userController.loginProcess);
 
 
 //PUT

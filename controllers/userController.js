@@ -13,6 +13,10 @@ let controller = {
         console.log("Renderizando al login");
         res.render("./user/login")
     },
+    profile: (req,res) => {
+        console.log(req.session);
+        res.render('./user/profile')
+    },
     create: (req,res) => {
         console.log("creando al ususario");
         //validaciones
@@ -40,11 +44,28 @@ let controller = {
         console.log(userTocreate);
         
         User.create(userTocreate);
-        res.redirect('/user/login')
-    
-    
-    
-    }
+        res.redirect('/user/login');
+        },
+
+        loginProcess : (req,res) => {
+            console.log("estoy chekeando quien entra y quien no");
+            let userTologin = User.findByField('email' , req.body.email);
+            if(userTologin){
+                isOk = bcryptjs.compareSync(req.body.password , userTologin.password);
+                if(isOk)
+                {   
+                    req.session.userLogged = userTologin;
+                    res.render('./user/profile' , {user: req.session.userLogged})
+                }   
+                else
+                {
+                    res.render('./user/login' , {errors: { email: {msg: 'las credenciales son iguales'}}})
+                }
+            }
+            res.render('./user/login' , {errors: { email: {msg: 'No existe tal usuario'}}})
+
+        }
+
     
 }
 

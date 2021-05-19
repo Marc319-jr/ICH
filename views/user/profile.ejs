@@ -1,0 +1,29 @@
+<head>
+<%- include('../partials/head')  %> 
+<title>Profile</title>
+</head>
+
+<body>
+    <%- include('../partials/header')  %>
+    <main>
+        <div class = "center">
+        <i class="fas fa-user"></i>
+        </div>
+        <div class = profile>
+        <h1>Hey <%= user.username  %></h1>
+        <div class  ="userinfo">
+            <img src = "/images/avatars/<%= user.avatar%>" width="100px">
+            <h2>Email: <%= user.email  %> </h2>
+            <h2>Rol:  <%= user.usertype  %></h2>
+        </div>
+            </div>
+
+
+
+
+
+    </main>
+    <%- include('../partials/footer') %>
+
+
+</body>
