@@ -1,0 +1,47 @@
+<head>
+<%- include('../partials/head') %>
+<title>Times</title>
+</head>
+
+
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <div id = "byModel">
+            <p> Techs Table</p>
+            <a href ="#"> EDIT</a>
+            </div>
+        <table class = "content-table">
+            <thead>
+                <tr>
+                    <th>Tech Name</th>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wendsday</th>
+                    <th>Thursday</th>
+                    <th>Firday</th>
+                    <th>Saturday</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+                <% for( let i = 0; i < 7; i++ ) { %>
+                <tr>
+                <% for( let i = 0; i < 8; i++ ) { %>
+                    <% if (i==0) { %>
+                        <th>Name</th>
+                    <% } else { %>
+                    <th> <%= i %></th>
+                    <% } %>
+                <% } %>
+            </tr>
+            <% } %>
+     
+            </tbody>
+
+        </table>
+    </main>
+    <%- include('../partials/footer') %>
+</body>

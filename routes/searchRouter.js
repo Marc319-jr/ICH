@@ -23,10 +23,13 @@ let fileUpload = multer({storage});
 //get
 router.get('/byCar' , searchController.byCar);
 router.get('/addCar' , searchController.addCar);
+router.get('/carMake' , searchController.byCarMake);
+router.get('/addModel/:id' ,searchController.addModel)
 
 //post
 router.post('/createCar', fileUpload.single('logo'),searchController.createCar);
 //put
+router.put('/:id' , searchController.createModel);
 
 //delete
 

@@ -1,0 +1,34 @@
+<head>
+    <%- include('../partials/head/') %>
+    <title>Car search</title>
+</head>
+
+<body>
+    <%- include('../partials/header') %> 
+    <main>
+        <div id = "byModel">
+            <p> Select car model</p>
+            <a href ="/search/addModel/<%=auto.id %>"><i class="fas fa-plus"></i></a>
+            </div>
+            <section class = "blocksmodel">
+
+                <% if (auto.modelos == "") { %>
+                 <h1>aun no hay modelos</h1>
+                <% } 
+                else { %>
+                <% for( let i = 0; i < auto.modelos.length; i++ ) { %>
+                    <a href = "#" ><article class = "blockmodel">
+                <h1><%= auto.modelos[i] %></h1>
+            </article>
+        </a>
+
+           
+                <% } %>
+                <% } %>
+    
+    
+            </section>
+
+    </main>
+    <%- include('../partials/footer') %> 
+</body>

@@ -25,10 +25,12 @@ app.use(session({secret: 'Shh, Its a secret',
 const indexRouter = require('./routes/indexRouter');
 const userRouter = require('./routes/userRouter');
 const searchRouter = require('./routes/searchRouter')
+const tableRouter = require('./routes/tablesRouter');
 //uso de rutas
 app.use('/' , indexRouter);
 app.use('/user', userRouter);
 app.use('/search' , searchRouter);
+app.use('/tables' , tableRouter);
 
 
 app.listen(4000 , () => {

@@ -75,7 +75,7 @@ body  header{
 
     body main {
         background-color: #1E1E1E;
-        padding: 50px;
+        padding: 70px;
     }
 
 
@@ -118,7 +118,7 @@ body  header{
 
     body footer{
     background-color:#323233;
-    height: 160px;
+    height: 120px;
     text-align: center;
     color: white;
     align-content: flex-end;
@@ -232,8 +232,8 @@ body  header{
         color: rgb(220,220,220);
         background-color: teal;
         padding: 15px;
+        text-decoration: none;
         border-radius: 50%;
-
     }
    
 
@@ -245,11 +245,68 @@ body  header{
         margin: auto;
         border: 2px solid black;
         border-radius: 10px;
+        max-width: 1170px;
     }
     
-    body main .blocks .block{
+    body main .blocks a .block{
         padding: 20px;
         margin: 10px;
+        height: 170px;
+        border: 1pxs solid black;
+        border-radius: 10px;
+        background-color:#323233;
+        text-align: center;
+        text-decoration: none;
+        color: rgb(230,230,230);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    body main .blocks a .block img{
+        margin-top: 10px;
+        max-height: 100px;
+        justify-self: center;
+        text-align: center;
+    }
+
+    body main #byModel{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        color:rgb(220,220,220);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    body main #byModel a{
+        color: rgb(220,220,220);
+        background-color: teal;
+        padding: 15px;
+        text-decoration: none;
+        border-radius: 50%;
+
+    }
+
+    body main .blocksmodel {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: teal;
+        padding: 80px;
+        margin: 20px auto;
+        border: 2px solid black;
+        border-radius: 10px;
+        max-width: 900px;
+
+    }
+    
+    body main .blocksmodel a .blockmodel{
+        padding: 20px;
+        margin: 10px;
+        height: 50px;
+        width: 119px;
         border: 1pxs solid black;
         border-radius: 10px;
         background-color:#323233;
@@ -257,15 +314,9 @@ body  header{
         color: rgb(230,230,230);
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content:center;
     }
-
-    body main .blocks .block img{
-        margin-top: 10px;
-        max-height: 100px;
-        justify-self: center;
-        text-align: center;
-    }
+   
 
 
 
@@ -308,6 +359,62 @@ body  header{
 
 
 
+     /*Add Model*/
+
+     body main .login textarea{
+         border: 1px solid black;
+         margin: 10px;
+         margin-bottom: 20px;
+         padding: 10px;
+         border-radius: 10px;
+     }
 
 
-  
+
+
+
+  /*  Tablas */
+
+
+     body main .content-table{
+         border-collapse: collapse;
+         margin: 25px auto;
+         font-size: 2em;
+         min-width: 400px; 
+         background-color: teal;
+         text-align: left;
+         border-radius: 10px 10px 0 0;
+         overflow: hidden;
+
+
+     }
+
+     body main .content-table thead tr{
+        background-color:#323233;
+        color: black;
+        text-align: left;
+        font-weight: bold;
+     }
+
+
+     body main .content-table th{
+        padding: 20px 15px;
+     }
+
+     body main .content-table td{
+         padding: 20px 15px;
+     }
+
+     body main .content-table tbody tr{
+         border-bottom: 1px solid black;
+     }
+
+     body main .content-table tbody tr:nth-of-type(even) {
+        background-color:#323233;
+     }
+
+     body main .content-table tbody tr:last-of-type {
+        border-bottom: 2px solid black;
+    }
+
+     

@@ -44,6 +44,12 @@ const Search = {
         //guardar info
     },
 
+    writeFile: function(array){
+        let fileTowrite = JSON.stringify(array);
+        fs.writeFileSync(this.fileName , fileTowrite);
+        return true
+    },
+
     delete : function(id){
         let allUsers = this.findAll();
         let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);

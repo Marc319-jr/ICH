@@ -1,0 +1,21 @@
+<head>
+    <%- include('../partials/head') %>
+    <title>Add Car</title>
+    </head>
+    
+    <body>
+        <%-include('../partials/header') %>
+        <main>
+            <form action = "/search/<%=auto.id%>?_method=PUT" class = "login" method="POST">
+                <h1 style="color:white"><%=auto.nombre  %> </h1>
+                <h1>Add Model</h1>
+                <textarea placeholder="Ingrese modelos con el siguiente formato: Falcon,F-150,Explorer,Fiesta" name = "modelos"></textarea>
+                <br>
+                <input name ="test" type="text">
+                <button>Crear</button>
+            </form>   
+        </main>
+        <%- include('../partials/footer') %>
+    </body>
+    
+    

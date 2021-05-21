@@ -18,10 +18,11 @@
             <% } 
             else { %>
             <% for( let i = 0; i < autos.length; i++ ) { %>
-            <article class = "block">
+            <a href = "/search/carMake?id=<%=autos[i].id%>" ><article class = "block">
                 <h1><%= autos[i].nombre %></h1>
                 <img src = "/images/cars/logos/<%= autos[i].imagen %>" alt = "logo marca" width="133px">
             </article>
+        </a>
             <% } %>
             <% } %>
 

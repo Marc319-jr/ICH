@@ -7,5 +7,14 @@
   "passcheck": "Ailin1997",
   "usertype": "Admin",
   "avatar": "user-1621466050839.jpeg"
+ },
+ {
+  "id": 2,
+  "username": "Marcelo Sznek",
+  "email": "marce@gmail.com",
+  "password": "$2a$10$r3FqpnVgE8xg4GPgIA5i1eVyXYxpFbEya5bAplQuz270kxjGsY27q",
+  "passcheck": "123456",
+  "usertype": "Admin",
+  "avatar": "user-1621549792347.jpeg"
  }
 ]
