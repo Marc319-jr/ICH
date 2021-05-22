@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
 const path = require('path');
+const guestMiddleware = require('../validators/guestMiddleware');
+const authMiddleware = require('../validators/authMiddleware');
 
 //configuracion de multer
 let multer = require('multer');
@@ -21,9 +23,10 @@ let fileUpload = multer({storage});
 // De aca mandamos las validaciones al formulario y controlador atravez de la funcion body
 const validation = require('../validators/userValidator')
 //GETS
-router.get('/register',  userController.register);
-router.get('/login' , userController.login);
-router.get('/profile', userController.profile);
+router.get('/register',guestMiddleware , userController.register);
+router.get('/login' , guestMiddleware,userController.login);
+router.get('/profile',authMiddleware, userController.profile);
+router.get('/logout' , authMiddleware , userController.logout);
 
 //POST
 router.post('/create' , fileUpload.single('imagen'), validation , userController.create);

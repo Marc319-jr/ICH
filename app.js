@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const session = require('express-session');
+const cookies = require('cookie-parser');
 app.use(express.static('public'));
 
 //Declaraciones necesarias para poder utilziar POST
@@ -20,6 +21,18 @@ app.set('view engine', 'ejs');
 app.use(session({secret: 'Shh, Its a secret',
                  resave: false,
                  saveUninitialized: false}));
+
+//uso de cookies
+
+app.use(cookies());
+
+
+//middlewares
+
+const userLoggedMiddleware = require('./validators/userLoggedMiddleware');
+
+//uso de middlewares
+//app.use(userLoggedMiddleware);
 
 //declaracion de rutas
 const indexRouter = require('./routes/indexRouter');

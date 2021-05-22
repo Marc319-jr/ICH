@@ -13,9 +13,18 @@
     </div>
     <div class = "right">
         <i class="fas fa-user"></i>
+        <% if (locals.user) { %>    
+        <ul type="none">
+            <li><a href="/user/profile">Hello <%= user.username %></a></li>   
+            <li><a href="/user/logout">Logout</a></li>       
+        </ul>
+        <% } else { %>
         <ul type="none">
             <li><a href="/user/login">Login</a></li>          
             <li><a href="/user/register">Register</a></li>          
         </ul>
+        <% } %>
+         
+
     </div>
 </header>

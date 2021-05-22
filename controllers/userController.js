@@ -14,8 +14,8 @@ let controller = {
         res.render("./user/login")
     },
     profile: (req,res) => {
-        console.log(req.session);
-        res.render('./user/profile')
+        console.log(req.cookies.userEmail);
+        res.render('./user/profile' , {user: req.session.userLogged})
     },
     create: (req,res) => {
         console.log("creando al ususario");
@@ -55,6 +55,9 @@ let controller = {
                 if(isOk)
                 {   
                     req.session.userLogged = userTologin;
+                    if(req.body.recordar){
+                        res.cookie('userEmail' , req.body.email , {maxAge: 1000 * 60 * 2});
+                    }
                     res.render('./user/profile' , {user: req.session.userLogged})
                 }   
                 else
@@ -64,6 +67,13 @@ let controller = {
             }
             res.render('./user/login' , {errors: { email: {msg: 'No existe tal usuario'}}})
 
+        },
+
+        logout: (req,res) => {
+            req.session.destroy();
+            console.log("Alguine salio");
+            console.log(req.session);
+            res.redirect("/")
         }
 
     

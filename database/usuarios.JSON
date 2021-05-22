@@ -16,5 +16,14 @@
   "passcheck": "123456",
   "usertype": "Admin",
   "avatar": "user-1621549792347.jpeg"
+ },
+ {
+  "id": 3,
+  "username": "Luca",
+  "email": "Luca@gmail.com",
+  "password": "$2a$10$BAF7XJqMI4xGOTLiERvzbusAxrNeOCkb1YTul/wJnZWv1AgRRCoQO",
+  "passcheck": "123",
+  "usertype": "Admin",
+  "avatar": "user-1621664999770.jpeg"
  }
 ]
