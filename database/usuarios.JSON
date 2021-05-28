@@ -25,5 +25,14 @@
   "passcheck": "123",
   "usertype": "Admin",
   "avatar": "user-1621664999770.jpeg"
+ },
+ {
+  "id": 4,
+  "username": "Roberto",
+  "email": "Roberto@gmail.com",
+  "password": "$2a$10$WRVCN.NfDpGlao/tZRIP.uNYD930Ym/VMYWbcljAQxWDQqloX9Gay",
+  "passcheck": "123",
+  "usertype": "Admin",
+  "avatar": "user-1621824212559.png"
  }
 ]

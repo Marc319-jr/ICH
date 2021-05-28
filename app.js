@@ -46,6 +46,6 @@ app.use('/search' , searchRouter);
 app.use('/tables' , tableRouter);
 
 
-app.listen(4000 , () => {
+app.listen(3000 , () => {
     console.log("Corriendo al servidor 3000")
 })

@@ -27,16 +27,17 @@
             </thead>
 
             <tbody>
-                <% for( let i = 0; i < 7; i++ ) { %>
+                <% for( let itech = 0; itech < tabla.length; itech++ ) { %>
                 <tr>
-                <% for( let i = 0; i < 8; i++ ) { %>
-                    <% if (i==0) { %>
-                        <th>Name</th>
-                    <% } else { %>
-                    <th> <%= i %></th>
+                    <th>
+                   <%= tabla[itech].name %>
+                    </th>
+                    <% for( let ih = 0; ih < tabla[itech].horarios.length; ih++ ) { %>
+                        <th>
+                        <%= tabla[itech].horarios[ih]  %> 
+                        </th>
                     <% } %>
-                <% } %>
-            </tr>
+               </tr>
             <% } %>
      
             </tbody>
