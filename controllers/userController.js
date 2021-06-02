@@ -15,7 +15,7 @@ let controller = {
     },
     profile: (req,res) => {
         console.log(req.cookies.userEmail);
-        res.render('./user/profile' , {user: req.session.userLogged})
+        res.render('./user/profile')
     },
     create: (req,res) => {
         console.log("creando al ususario");
@@ -58,7 +58,7 @@ let controller = {
                     if(req.body.recordar){
                         res.cookie('userEmail' , req.body.email , {maxAge: 1000 * 60 * 2});
                     }
-                    res.render('./user/profile' , {user: req.session.userLogged})
+                    res.render('./user/profile')
                 }   
                 else
                 {

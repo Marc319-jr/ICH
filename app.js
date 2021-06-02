@@ -32,7 +32,7 @@ app.use(cookies());
 const userLoggedMiddleware = require('./validators/userLoggedMiddleware');
 
 //uso de middlewares
-//app.use(userLoggedMiddleware);
+app.use(userLoggedMiddleware);
 
 //declaracion de rutas
 const indexRouter = require('./routes/indexRouter');

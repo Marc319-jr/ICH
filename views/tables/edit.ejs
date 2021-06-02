@@ -1,15 +1,14 @@
 <head>
-<%- include('../partials/head') %>
-<title>Times</title>
+<%- include('../partials/head')  %> 
+<title>Edit Table</title>
 </head>
 
-
 <body>
-    <%- include('../partials/header') %>
+    <%- include('../partials/header')  %> 
     <main>
         <div id = "byModel">
             <p> Techs Table</p>
-            <a href ="/tables/edit"> EDIT</a>
+           
             </div>
         <table class = "content-table">
             <thead>
@@ -25,24 +24,27 @@
                 </tr>
 
             </thead>
-
             <tbody>
-                <% for( let itech = 0; itech < tabla.length; itech++ ) { %>
+                <form method = "POST" action = "/tables/update" > 
+                <% for( let itech = 0; itech < data.length; itech++ ) { %>
                 <tr>
                     <th>
-                   <%= tabla[itech].name %>
+                   <%= data[itech].name %>
                     </th>
-                    <% for( let ih = 0; ih < tabla[itech].horarios.length; ih++ ) { %>
+                    <% for( let ih = 0; ih < data[itech].horarios.length; ih++ ) { %>
                         <th>
-                        <%= tabla[itech].horarios[ih]  %> 
+                       <input placeholder=" <%= data[itech].horarios[ih]  %>" value=" <%= data[itech].horarios[ih]  %>" name = "[<%=itech%>,<%=ih%>]"> 
                         </th>
                     <% } %>
                </tr>
             <% } %>
-     
             </tbody>
-
         </table>
+        <button type="submit">Guardar</button>
+    </form>
+
     </main>
-    <%- include('../partials/footer') %>
+
+    <%- include('../partials/footer')  %> 
+
 </body>

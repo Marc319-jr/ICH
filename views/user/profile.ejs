@@ -10,11 +10,11 @@
         <i class="fas fa-user"></i>
         </div>
         <div class = profile>
-        <h1>Hey <%= user.username  %></h1>
+        <h1>Hey <%= locals.userLogged.username  %></h1>
         <div class  ="userinfo">
-            <img src = "/images/avatars/<%= user.avatar%>" width="100px">
-            <h2>Email: <%= user.email  %> </h2>
-            <h2>Rol:  <%= user.usertype  %></h2>
+            <img src = "/images/avatars/<%= locals.userLogged.avatar%>" width="100px">
+            <h2>Email: <%= locals.userLogged.email  %> </h2>
+            <h2>Rol:  <%= locals.userLogged.usertype  %></h2>
         </div>
             </div>
     </main>
