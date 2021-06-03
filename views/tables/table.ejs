@@ -1,6 +1,6 @@
 <head>
 <%- include('../partials/head') %>
-<title>Times</title>
+<title><%=nombre%> Times</title>
 </head>
 
 
@@ -8,13 +8,13 @@
     <%- include('../partials/header') %>
     <main>
         <div id = "byModel">
-            <p> Techs Table</p>
-            <a href ="/tables/edit"> EDIT</a>
+            <p><%=nombre%> Times</p>
+            <a href ="/tables/edit?tableToEdit=<%=nombre%>"> EDIT</a>
             </div>
         <table class = "content-table">
             <thead>
                 <tr>
-                    <th>Tech Name</th>
+                    <th>Name</th>
                     <th>Sunday</th>
                     <th>Monday</th>
                     <th>Tuesday</th>

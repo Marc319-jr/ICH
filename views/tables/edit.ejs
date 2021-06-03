@@ -14,13 +14,13 @@
             <thead>
                 <tr>
                     <th>Tech Name</th>
-                    <th>Sunday</th>
-                    <th>Monday</th>
                     <th>Tuesday</th>
                     <th>Wendsday</th>
                     <th>Thursday</th>
-                    <th>Firday</th>
+                    <th>Friday</th>
                     <th>Saturday</th>
+                    <th>Sunday</th>
+                    <th>Monday</th>
                 </tr>
 
             </thead>
@@ -33,14 +33,14 @@
                     </th>
                     <% for( let ih = 0; ih < data[itech].horarios.length; ih++ ) { %>
                         <th>
-                       <input placeholder=" <%= data[itech].horarios[ih]  %>" value=" <%= data[itech].horarios[ih]  %>" name = "[<%=itech%>,<%=ih%>]"> 
+                       <input style="width: 110px; border-radius: 10px; text-align: center;" placeholder=" <%= data[itech].horarios[ih]  %>" value=" <%= data[itech].horarios[ih]  %>" name = "value<%=itech%><%=ih%>"> 
                         </th>
                     <% } %>
                </tr>
             <% } %>
             </tbody>
         </table>
-        <button type="submit">Guardar</button>
+        <button  type="submit">Guardar</button>
     </form>
 
     </main>

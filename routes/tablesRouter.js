@@ -3,7 +3,7 @@ const router = express.Router();
 const tableController = require('../controllers/tableController');
 
 
-router.get('/techs' , tableController.tech);
+router.get('/' , tableController.show);
 router.get('/edit' , tableController.editView);
 
 

@@ -3,36 +3,18 @@
   "id": 1,
   "username": "Marcelo Sznek",
   "email": "marcelo.sznek@gmail.com",
-  "password": "$2a$10$MzlVtFu1r9z60049h5uoPelZHt2iLneUpz6aD/pLS5OAlvpAmZdY2",
+  "password": "$2a$10$RN78y5vaIVjV0nh4/D8pxOgTNL/D98Z/GhHkR7rdXTmGiDNfOefBS",
   "passcheck": "Ailin1997",
   "usertype": "Admin",
-  "avatar": "user-1621466050839.jpeg"
+  "avatar": "user-1622701864803.jpeg"
  },
  {
   "id": 2,
   "username": "Marcelo Sznek",
-  "email": "marce@gmail.com",
-  "password": "$2a$10$r3FqpnVgE8xg4GPgIA5i1eVyXYxpFbEya5bAplQuz270kxjGsY27q",
+  "email": "marce@Dh.com",
+  "password": "$2a$10$gEKBbMz37YfMbSE8Uh40HeVgh9pgrvuvGUC77A.BaYQxuMxcQGF2.",
   "passcheck": "123456",
   "usertype": "Admin",
-  "avatar": "user-1621549792347.jpeg"
- },
- {
-  "id": 3,
-  "username": "Luca",
-  "email": "Luca@gmail.com",
-  "password": "$2a$10$BAF7XJqMI4xGOTLiERvzbusAxrNeOCkb1YTul/wJnZWv1AgRRCoQO",
-  "passcheck": "123",
-  "usertype": "Admin",
-  "avatar": "user-1621664999770.jpeg"
- },
- {
-  "id": 4,
-  "username": "Roberto",
-  "email": "Roberto@gmail.com",
-  "password": "$2a$10$WRVCN.NfDpGlao/tZRIP.uNYD930Ym/VMYWbcljAQxWDQqloX9Gay",
-  "passcheck": "123",
-  "usertype": "Admin",
-  "avatar": "user-1621824212559.png"
+  "avatar": "user-1622702059383.jpeg"
  }
 ]

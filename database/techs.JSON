@@ -1,13 +1,122 @@
-[{"name": "Chirs",
-  "horarios": ["5PM-11PM","5PM-11PM","5PM-11PM","5PM-11PM","5PM-11PM","5PM-11PM","5PM-11PM"]
+[
+ {
+  "name": "Eric",
+  "horarios": [
+   "7AM-5PM",
+   "7AM-5PM",
+   "7AM-5PM ",
+   "7AM-5PM ",
+   "7AM-4PM  ",
+   "OFF",
+   "7AM-5PM"
+  ]
  },
  {
-  "name": "Marce",
-  "horarios": ["8AM-5PM","8AM-5PM","8AM-5PM","8AM-5PM","8AM-5PM","8AM-5PM","8AM-5PM"]
+  "name": "Chris",
+  "horarios": [
+   "7AM-5PM",
+   "7AM-5PM",
+   "7AM-5PM ",
+   "7AM-4PM ",
+   "OFF",
+   "7AM-5PM",
+   "7AM-5PM "
+  ]
  },
  {
-  "name": "Berko",
-  "horarios": ["1PM-1PM","1PM-1PM","1PM-1PM","1PM-1PM","1PM-1PM","1PM-1PM","1PM-1PM"]
+  "name": "Paul",
+  "horarios": [
+   "8AM-6PM ",
+   "OFF",
+   "8AM-6PM",
+   "8AM-6PM ",
+   "8AM-6PM ",
+   "8AM-6PM ",
+   "8AM-6PM "
+  ]
+ },
+ {
+  "name": "Victor",
+  "horarios": [
+   "7AM-5PM",
+   "7AM-8PM ",
+   "7AM-3PM ",
+   "8AM-6PM ",
+   "7AM-7PM",
+   "7AM-5PM ",
+   "OFF "
+  ]
+ },
+ {
+  "name": "Adan",
+  "horarios": [
+   "2PM-CLOSING ",
+   "12PM-8PM",
+   "2PM-CLOSING",
+   "2PM-CLOSING ",
+   "OFF ",
+   "OFF ",
+   "OFF "
+  ]
+ },
+ {
+  "name": "Marco",
+  "horarios": [
+   "2PM-CLOSING",
+   "12PM-8PM",
+   "8AM-6PM",
+   "OFF ",
+   "2PM-11PM",
+   "8AM-6PM",
+   "2PM-11PM"
+  ]
+ },
+ {
+  "name": "Vuk",
+  "horarios": [
+   "OFF ",
+   "2PM-11PM",
+   "8AM-5PM",
+   "7AM-7PM",
+   "2PM-11PM",
+   "2PM-11PM",
+   "8AM-3PM"
+  ]
+ },
+ {
+  "name": "Gabriel",
+  "horarios": [
+   "3PM-11PM ",
+   "8AM-5PM ",
+   "OFF",
+   "2PM-11PM",
+   "8AM-5PM",
+   "2PM-11PM",
+   "12PM-8PM "
+  ]
+ },
+ {
+  "name": "David",
+  "horarios": [
+   "7AM-5PM",
+   "7AM-5PM ",
+   "3PM-11PM ",
+   "7AM-3PM",
+   "OFF ",
+   "3PM-11PM ",
+   "7AM-5PM"
+  ]
+ },
+ {
+  "name": "Brent",
+  "horarios": [
+   "---",
+   "6PM-11PM ",
+   "6PM-11PM",
+   "6PM-11PM",
+   "-- ",
+   "--",
+   "6PM-11PM "
+  ]
  }
-
 ]

@@ -15,6 +15,7 @@ let controller = {
     },
     profile: (req,res) => {
         console.log(req.cookies.userEmail);
+
         res.render('./user/profile')
     },
     create: (req,res) => {
@@ -50,14 +51,14 @@ let controller = {
         loginProcess : (req,res) => {
             console.log("estoy chekeando quien entra y quien no");
             let userTologin = User.findByField('email' , req.body.email);
+            console.log(userTologin);
             if(userTologin){
                 isOk = bcryptjs.compareSync(req.body.password , userTologin.password);
+                console.log(isOk);
                 if(isOk)
                 {   
                     req.session.userLogged = userTologin;
-                    if(req.body.recordar){
-                        res.cookie('userEmail' , req.body.email , {maxAge: 1000 * 60 * 2});
-                    }
+                    console.log(req.session.userLogged);
                     res.render('./user/profile')
                 }   
                 else
@@ -65,6 +66,7 @@ let controller = {
                     res.render('./user/login' , {errors: { email: {msg: 'las credenciales son iguales'}}})
                 }
             }
+            else
             res.render('./user/login' , {errors: { email: {msg: 'No existe tal usuario'}}})
 
         },

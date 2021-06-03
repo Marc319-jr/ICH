@@ -1,0 +1,50 @@
+[
+    {
+     "name": "Marce",
+     "horarios": [
+      "7AM-5PM",
+      "7AM-5PM",
+      "7AM-5PM ",
+      "7AM-5PM ",
+      "7AM-4PM  ",
+      "OFF",
+      "7AM-5PM"
+     ]
+    },
+    {
+     "name": "Luca",
+     "horarios": [
+      "7AM-5PM",
+      "7AM-5PM",
+      "7AM-5PM ",
+      "7AM-4PM ",
+      "OFF",
+      "7AM-5PM",
+      "7AM-5PM "
+     ]
+    },
+    {
+     "name": "Dor",
+     "horarios": [
+      "8AM-6PM ",
+      "OFF",
+      "8AM-6PM",
+      "8AM-6PM ",
+      "8AM-6PM ",
+      "8AM-6PM ",
+      "8AM-6PM "
+     ]
+    },
+    {
+     "name": "Lucio",
+     "horarios": [
+      "7AM-5PM",
+      "7AM-8PM ",
+      "7AM-3PM ",
+      "8AM-6PM ",
+      "7AM-7PM",
+      "7AM-5PM ",
+      "OFF "
+     ]
+    }
+]

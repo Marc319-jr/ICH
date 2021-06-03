@@ -1,14 +1,33 @@
 const fs = require('fs');
 
 const Techs = {
-    fileName: './database/techs.JSON',
+    fileNames: ['./database/techs.JSON', './database/dispatch.JSON'],
 
-    getData: function(){
-        return JSON.parse(fs.readFileSync(this.fileName , {encoding: 'utf-8'}));
+
+    getData: function(data){
+        return JSON.parse(fs.readFileSync(this.fileNames[data] , {encoding: 'utf-8'}));
     },
 
-    findAll: function(){
-        return this.getData();
+    findAll: function(tableType){
+        let data;
+        if(tableType == "Techs")
+        {
+            data = 0
+        }
+        else{
+            data = 1
+        }
+        
+        return this.getData(data);
+        
+    },
+
+    printFile: function(array, tableNum){
+        console.log("estoy por grabar un archivo :)");
+        let fileToPrint = JSON.stringify(array,null,' ');
+        fs.writeFileSync(this.fileNames[0] , fileToPrint);
+
+        return true
     }
 }
 
