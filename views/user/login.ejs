@@ -1,5 +1,6 @@
 <head>
     <%- include('../partials/head') %>
+    <title>Login</title>
 
 </head>
 
@@ -8,8 +9,15 @@
     <main>
         <form action = "/user/login" method="POST" class = "login">
             <h1>Log In</h1>
+            <% if (locals.errors && errors.email) { %>
+                <p class="error"> <%= errors.email.msg %></p>
+            <% } %>
             <input type = "email" name = "email" placeholder="Ingrese email">
             <input type="password" name="password" placeholder="Ingrese contraseña">
+            <div class = "recordar">
+            <label for="recordar">recordar usuario</label>
+            <input type="checkbox" name = "recordar">
+            </div>
             <a href = "#">Olvide mi contraseña</a>
             <button type="submit">Ingresar</button>
         </form>

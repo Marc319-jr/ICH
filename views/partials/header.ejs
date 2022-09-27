@@ -1,9 +1,9 @@
 <header>
     <div class = "left">
-        <a href ="/"><img src = "/images/logo/logo.png"></a>
+        <a href ="/"><img src = "/images/logo/newLogo.png"></a>
         <ul type ="none">
-            <li><a href="#">Dispatch</a></li>
-            <li><a href="#">Tech</a></li>
+            <li><a href="/tables/?tableName=Dispatch">Dispatch</a></li>
+            <li><a href="/tables/?tableName=Techs">Tech</a></li>
             <li><a href="#">Stock</a></li>
             <li><a href="#">Reports</a></li>
             <li><a href="#">Vans</a></li>
@@ -13,9 +13,18 @@
     </div>
     <div class = "right">
         <i class="fas fa-user"></i>
+        <% if (locals.userLogged) { %>    
+        <ul type="none">
+            <li><a href="/user/profile">Hello <%= locals.userLogged.username %></a></li>   
+            <li><a href="/user/logout">Logout</a></li>       
+        </ul>
+        <% } else { %>
         <ul type="none">
             <li><a href="/user/login">Login</a></li>          
             <li><a href="/user/register">Register</a></li>          
         </ul>
+        <% } %>
+         
+
     </div>
 </header>

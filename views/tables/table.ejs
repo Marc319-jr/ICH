@@ -1,0 +1,48 @@
+<head>
+<%- include('../partials/head') %>
+<title><%=nombre%> Times</title>
+</head>
+
+
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <div id = "byModel">
+            <p><%=nombre%> Times</p>
+            <a href ="/tables/edit?tableToEdit=<%=nombre%>"> EDIT</a>
+            </div>
+        <table class = "content-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wendsday</th>
+                    <th>Thursday</th>
+                    <th>Firday</th>
+                    <th>Saturday</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+                <% for( let itech = 0; itech < tabla.length; itech++ ) { %>
+                <tr>
+                    <th>
+                   <%= tabla[itech].name %>
+                    </th>
+                    <% for( let ih = 0; ih < tabla[itech].horarios.length; ih++ ) { %>
+                        <th>
+                        <%= tabla[itech].horarios[ih]  %> 
+                        </th>
+                    <% } %>
+               </tr>
+            <% } %>
+     
+            </tbody>
+
+        </table>
+    </main>
+    <%- include('../partials/footer') %>
+</body>

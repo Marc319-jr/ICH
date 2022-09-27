@@ -1,7 +1,11 @@
 let controller = {
     index: (req,res) => {
-        console.log("going to index");
-        res.render('./index');
+        if(req.session.userLogged)
+        {
+            res.render('./index' )
+        }
+        else
+            res.render('./index');
     }
 }
 

@@ -1,0 +1,20 @@
+[
+ {
+  "id": 1,
+  "username": "Marcelo Sznek",
+  "email": "marcelo.sznek@gmail.com",
+  "password": "$2a$10$RN78y5vaIVjV0nh4/D8pxOgTNL/D98Z/GhHkR7rdXTmGiDNfOefBS",
+  "passcheck": "Ailin1997",
+  "usertype": "Admin",
+  "avatar": "user-1622701864803.jpeg"
+ },
+ {
+  "id": 2,
+  "username": "Marcelo Sznek",
+  "email": "marce@Dh.com",
+  "password": "$2a$10$gEKBbMz37YfMbSE8Uh40HeVgh9pgrvuvGUC77A.BaYQxuMxcQGF2.",
+  "passcheck": "123456",
+  "usertype": "Admin",
+  "avatar": "user-1622702059383.jpeg"
+ }
+]

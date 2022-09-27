@@ -1,22 +1,45 @@
 <head>
     <%- include('../partials/head') %>
+    <title>Register</title>
 
 </head>
 
 <body>
     <%- include('../partials/header') %>
     <main>
-        <form action = "/user/create" method="POST" class = "login">
-            <h1>Log In</h1>
-            <input type = "email" name = "email" placeholder="Ingrese email">
-            <input type="password" name="password" placeholder="Ingrese contraseña">
+        <form action = "/user/create" class = "login" enctype="multipart/form-data"  method="POST">
+            <h1>Register</h1>
+            <input name="username" type = "text" placeholder="Nombre y Apellido">
+            <% if (locals.errors && errors.email) { %>
+                <p class="error">! <%= errors.email.msg  %> </p>
+               <% } %>
+            <input type = "email" name = "email" placeholder="Ingrese email"  value = "<%= locals.oldData ? oldData.email : null  %> ">
+            <% if (locals.errors && errors.password) { %>
+                <p class="error">! <%= errors.password.msg  %> </p>
+               <% } %>
+            <input type="password" name="password" placeholder="Ingrese contraseña"  >
+            <% if (locals.errors && errors.passcheck) { %>
+                <p class="error">! <%= errors.passcheck.msg  %> </p>
+               <% } %>
             <input type ="password" name = "passcheck" placeholder="Vuelva a ingresar la contraseña">
+            <% if (locals.errors && errors.usertype) { %>
+                <p class="error">! <%= errors.usertype.msg  %> </p>
+               <% } %>
             <label for ="usertype">Seleccione tipo de ususario:</label>
             <select name = "usertype">
-                <option name = "admin" >Admin</option>
-                <option name = "user">User</option>
+            <option value ="">Eliga una opcion</option>
+            <% let opciones = ['Admin' , 'User'] %>
+                <% for(let i = 0;i<opciones.length;i++ ) { %>
+                    <option value = "<%= opciones[i] %>" <%= locals.oldData && (opciones[i] === oldData.usertype) ? 'selected' : null %>> <%= opciones[i] %> </option>
+                <% } %>
+     
             </select>
-            <a href = "#">Ya tengo una cuenta</a>
+            <label for ="imagen">Seleccione su imagen de perfil</label>
+            <% if (locals.errors && errors.imagen) { %>
+                <p class="error">! <%= errors.imagen.msg  %> </p>
+               <% } %>
+            <input type="file" name = "imagen">
+            <a href = "/user/login">Ya tengo una cuenta</a>
             <button type="submit">Registrar</button>
         </form>
 

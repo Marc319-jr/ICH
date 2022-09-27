@@ -1,0 +1,50 @@
+<head>
+<%- include('../partials/head')  %> 
+<title>Edit Table</title>
+</head>
+
+<body>
+    <%- include('../partials/header')  %> 
+    <main>
+        <div id = "byModel">
+            <p> Techs Table</p>
+           
+            </div>
+        <table class = "content-table">
+            <thead>
+                <tr>
+                    <th>Tech Name</th>
+                    <th>Tuesday</th>
+                    <th>Wendsday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <form method = "POST" action = "/tables/update" > 
+                <% for( let itech = 0; itech < data.length; itech++ ) { %>
+                <tr>
+                    <th>
+                   <%= data[itech].name %>
+                    </th>
+                    <% for( let ih = 0; ih < data[itech].horarios.length; ih++ ) { %>
+                        <th>
+                       <input style="width: 110px; border-radius: 10px; text-align: center;" placeholder=" <%= data[itech].horarios[ih]  %>" value=" <%= data[itech].horarios[ih]  %>" name = "value<%=itech%><%=ih%>"> 
+                        </th>
+                    <% } %>
+               </tr>
+            <% } %>
+            </tbody>
+        </table>
+        <button  type="submit">Guardar</button>
+    </form>
+
+    </main>
+
+    <%- include('../partials/footer')  %> 
+
+</body>
